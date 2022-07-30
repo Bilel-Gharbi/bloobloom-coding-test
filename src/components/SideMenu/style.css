@@ -1,0 +1,148 @@
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  align-items: center;
+  border-right: 1px solid black;
+  z-index: 10000;
+}
+.side-sub-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 20%;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  z-index: 10000;
+}
+
+.sidebar-button {
+  align-items: center;
+  display: flex;
+  font-family: "Acumin Pro";
+  font-size: 12px;
+  justify-content: center;
+  letter-spacing: 2px;
+  line-height: 14px;
+  text-align: center;
+}
+.sidebar-menu-item {
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  border: 1px solid #000;
+  border-top: none;
+  left: 0;
+}
+.sidebar-menu-item:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+.sidebar-menu-item:hover > .sidebar-menu-item-title {
+  color: #fff !important;
+}
+.sidebar-menu-item:hover > .icon > .arrow {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.sidebar-menu-item-title {
+  font-family: "Acumin Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+  flex: 2;
+  margin-left: 1rem;
+}
+
+.icon {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+  .side-menu {
+    width: 100%;
+    z-index: 10000;
+  }
+  .side-sub-menu {
+    width: 100%;
+    z-index: 20000;
+    left: 0;
+  }
+
+  .go-back > div {
+    cursor: pointer;
+    /* color: #fff !important; */
+  }
+  .go-back:hover > div > div {
+    cursor: pointer;
+    color: #fff !important;
+  }
+  .go-back:hover > div > div {
+    cursor: pointer;
+    /* color: #fff !important; */
+  }
+  .go-back:hover > div > div > i.arrow.left {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .go-back {
+    display: none !important;
+  }
+}
