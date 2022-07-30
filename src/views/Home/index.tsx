@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import FiltersBar from "../../components/FiltersBar";
 import GlassesList from "../../components/GlassesList";
 import { useAppDispatch, useAppSelector } from "../../hooks";
